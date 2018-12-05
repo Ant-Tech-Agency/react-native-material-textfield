@@ -518,10 +518,7 @@ export default class TextField extends PureComponent {
 
             <TextInput
               style={[styles.input, inputStyle, inputStyleOverrides]}
-              selectionColor={tintColor}
-
-              {...props}
-
+              selectionColor={tintColor}             
               editable={!disabled && editable}
               onChange={this.onChange}
               onChangeText={this.onChangeText}
@@ -530,6 +527,7 @@ export default class TextField extends PureComponent {
               onBlur={this.onBlur}
               value={value}
               ref={this.updateRef}
+              {...props}
             />
 
             {this.renderAffix('suffix', active, focused)}
