@@ -514,8 +514,7 @@ export default class TextField extends PureComponent {
           <Label {...labelProps}>{label}</Label>
 
           <View style={styles.row}>
-            {this.renderAffix('prefix', active, focused)}
-
+            {(this.state.value !== '') ? this.renderAffix('prefix', active, focused) : null}
             <TextInput
               style={[styles.input, inputStyle, inputStyleOverrides]}
               selectionColor={tintColor}             
